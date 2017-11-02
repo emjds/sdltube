@@ -4,7 +4,7 @@ CC = g++
 
 COMPILER_FLAGS =
 
-LINKER_FLAGS = -lSDL2 -lSDL_ttf
+LINKER_FLAGS = -lSDL2 -lSDL2_ttf
 
 OBJ_NAME = sdltube
 

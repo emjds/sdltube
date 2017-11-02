@@ -1,4 +1,5 @@
 #include<SDL2/SDL.h>
+#include<SDL2/SDL_ttf.h>
 
 SDL_Window* init()
 {
@@ -16,8 +17,15 @@ SDL_Window* init()
 		}
 		else
 		{
-			SDL_ShowCursor(SDL_DISABLE);
-			return window;
+			if(TTF_Init() == -1)
+			{
+				return NULL;
+			}
+			else
+			{
+				SDL_ShowCursor(SDL_DISABLE);
+				return window;
+			}
 		}
 	}
 }
